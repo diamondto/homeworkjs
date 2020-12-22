@@ -17,7 +17,7 @@
  * // => [['a', 'b', 'c'], ['d']]
  */
 function chunk(array, size ) {
-    size = Math.max(toInteger(size), 0)
+//     size = Math.max(toInteger(size), 0)
     // 保证size是正数
     const length = array == null ? 0 : array.length
     if (!length || size < 1) {
@@ -29,7 +29,7 @@ function chunk(array, size ) {
     // 新数组需要多大的长度
   
     while (index < length) {
-      result[resIndex++] = slice(array, index, (index += size))
+      result[resIndex++] = array.slice(index, (index += size))
     }
     // 存放到新数组中，每次复制指定的步长，这样就可以切片分组了！
     return result
