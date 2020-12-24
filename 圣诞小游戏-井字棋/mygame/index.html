@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, shrink-to-fit=yes">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>圣诞节游戏！</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    
+    <div class='game'></div>
+    <button class="btn" onclick="mygame.restart()" title="Restart this game">再来一局！</button>
+
+    <script src="js/demo.js"></script>
+    <script>
+        mygame.init( document.querySelector('.game') );
+        mygame.start();
+    </script>
+    
+</body>
+</html>
