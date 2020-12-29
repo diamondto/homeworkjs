@@ -1,0 +1,11 @@
+.footer {
+  height: 60px;
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: flex-start;
+  align-items: flex-end;
+  font-family: 'Balsamiq Sans';
+  bottom: 15px;
+  right: 15px;
+  user-select: none;
+}
