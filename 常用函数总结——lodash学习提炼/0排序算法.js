@@ -8,20 +8,37 @@
 
 */
 
+// const moveZero = (arr) => {
+//     let n = 0
+//     arr.forEach((item, index) => {
+//         if (item === 0){
+//             arr.splice(index, 1)
+//             n++;
+//         }
+//     })
+//     arr.push(...(new Array(n)).fill(0))
+//     return arr;
+// }
+
+// let arr =[1,1,4,5,0,8,9,5,0,0]
+// console.log(moveZero(arr));
 const moveZero = (arr) => {
     let n = 0
     arr.forEach((item, index) => {
         if (item === 0){
-            arr.splice(index, 1)
             n++;
         }
     })
-    arr.push(...(new Array(n)).fill(0))
-    return arr;
+    let res = arr.filter((v, i) => v > 0)
+    res.push(...(new Array(n)).fill(0))
+    
+    return res;
 }
 
-let arr =[1,1,4,5,0,8,9,5,0,0]
-console.log(moveZero(arr));
+let arr =[1,1,4,5,0,0,8,9,5,0,0,7]
+let newArr = moveZero(arr)
+console.log(newArr);
+
 
 // 输出
 // [
